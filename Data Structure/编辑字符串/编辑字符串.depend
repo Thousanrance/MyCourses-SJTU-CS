@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1623370894 source:d:\个人文件夹\李槐安\大一下\数据结构\编辑字符串\main.cpp
+	<iostream>
+	<stack>
+	<cstring>
+

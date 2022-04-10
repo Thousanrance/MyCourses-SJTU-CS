@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1617288874 source:d:\个人文件夹\李槐安\大一下\数据结构\排队系统模拟类\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"../链式队列/linkQueue.h"
+
+1616900285 d:\个人文件夹\李槐安\大一下\数据结构\链式队列\linkqueue.h
+	<cstddef>
+

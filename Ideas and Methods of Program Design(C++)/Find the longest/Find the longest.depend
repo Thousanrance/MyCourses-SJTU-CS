@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1604046605 source:c:\users\xiao-pc\desktop\find the longest\main.cpp
+	<iostream>
+	<cstring>
+	<cstdio>
+

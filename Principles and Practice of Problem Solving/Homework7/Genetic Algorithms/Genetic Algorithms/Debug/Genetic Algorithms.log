@@ -1,0 +1,3 @@
+﻿  GA.cpp
+D:\个人文件夹\李槐安\大二上\问题求解与实践\Homework7\Genetic Algorithms\Genetic Algorithms\GA.cpp(292,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  Genetic Algorithms.vcxproj -> D:\个人文件夹\李槐安\大二上\问题求解与实践\Homework7\Genetic Algorithms\Debug\Genetic Algorithms.exe

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1617187117 source:d:\个人文件夹\李槐安\大一下\数据结构\哈夫曼树类\main.cpp
+	<iostream>
+	"hfTree.h"
+
+1617187343 d:\个人文件夹\李槐安\大一下\数据结构\哈夫曼树类\hftree.h
+	<string>
+

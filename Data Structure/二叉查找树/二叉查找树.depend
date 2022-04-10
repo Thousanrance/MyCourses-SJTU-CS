@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1618718933 source:d:\个人文件夹\李槐安\大一下\数据结构\二叉查找树\main.cpp
+	<iostream>
+	"../集合类/SET.h"
+	"BinarySearchTree.h"
+
+1618718322 d:\个人文件夹\李槐安\大一下\数据结构\集合类\set.h
+
+1618720121 d:\个人文件夹\李槐安\大一下\数据结构\二叉查找树\binarysearchtree.h
+	"../集合类/SET.h"
+

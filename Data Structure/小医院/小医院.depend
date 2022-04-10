@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1619743647 source:d:\个人文件夹\李槐安\大一下\数据结构\小医院\main.cpp
+	<iostream>
+
+1621154598 source:d:\个人文件夹\李槐安\大一下\数据结构\小医院\main2.cpp
+	<iostream>
+	<queue>
+	<cstring>
+

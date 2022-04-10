@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1623376459 source:d:\个人文件夹\李槐安\大一下\数据结构\三棵树\main.cpp
+	<iostream>
+	<cstring>
+	<stack>
+	<queue>
+
+1623377051 source:d:\个人文件夹\李槐安\大一下\数据结构\三棵树\main2.cpp
+	<iostream>
+	<cstring>
+
+1623378075 source:d:\个人文件夹\李槐安\大一下\数据结构\三棵树\main3.cpp
+	<iostream>
+	<cstring>
+

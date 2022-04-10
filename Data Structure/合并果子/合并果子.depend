@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1618142384 source:d:\个人文件夹\李槐安\大一下\数据结构\合并果子\main.cpp
+	<queue>
+	<cstdio>
+	<cstring>
+

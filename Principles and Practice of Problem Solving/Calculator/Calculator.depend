@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1632021899 source:d:\个人文件夹\李槐安\大二上\问题求解与实践\calculator\main.cpp
+	<iostream>
+	<iomanip>
+	<errno.h>
+

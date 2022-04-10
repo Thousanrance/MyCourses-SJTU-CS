@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1615648575 source:d:\个人文件夹\李槐安\大一下\数据结构\顺序栈\main.cpp
+	<iostream>
+	"seqStack.h"
+
+1615648701 d:\个人文件夹\李槐安\大一下\数据结构\顺序栈\seqstack.h
+	<iostream>
+

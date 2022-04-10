@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1615649068 source:d:\个人文件夹\李槐安\大一下\数据结构\链式栈\main.cpp
+	<iostream>
+	"linkStack.h"
+
+1615649049 d:\个人文件夹\李槐安\大一下\数据结构\链式栈\linkstack.h
+	<iostream>
+

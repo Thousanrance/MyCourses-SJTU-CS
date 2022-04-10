@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1635130213 source:d:\个人文件夹\李槐安\大二上\问题求解与实践\find the k-th largest element in an array\main.cpp
+	<iostream>
+	<vector>
+	<sstream>
+

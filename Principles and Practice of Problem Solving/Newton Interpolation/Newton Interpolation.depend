@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1633073167 source:d:\个人文件夹\李槐安\大二上\问题求解与实践\newton interpolation\main.cpp
+	<iostream>
+	<vector>
+	<sstream>
+	<iomanip>
+	<cmath>
+

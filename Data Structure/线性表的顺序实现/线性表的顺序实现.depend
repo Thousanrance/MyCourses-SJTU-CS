@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1614909165 source:d:\个人文件夹\李槐安\大一下\数据结构\线性表\main.cpp
+	<iostream>
+	"seqList.h"
+
+1614697233 source:d:\个人文件夹\李槐安\大一下\数据结构\线性表\seqlist.cpp
+	"seqList.h"
+	<iostream>
+
+1614909541 d:\个人文件夹\李槐安\大一下\数据结构\线性表\seqlist.h
+	<iostream>
+
+1614909339 source:d:\个人文件夹\李槐安\大一下\数据结构\线性表\seqlist.h
+	<iostream>
+
+1616898812 source:d:\个人文件夹\李槐安\大一下\数据结构\线性表的顺序实现\main.cpp
+	<iostream>
+	"seqList.h"
+
+1615648834 d:\个人文件夹\李槐安\大一下\数据结构\线性表的顺序实现\seqlist.h
+	<iostream>
+
+1615648834 source:d:\个人文件夹\李槐安\大一下\数据结构\线性表的顺序实现\seqlist.h
+	<iostream>
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1622122138 source:d:\个人文件夹\李槐安\大一下\数据结构\stl库\静态查找表.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+
+1622122147 source:d:\个人文件夹\李槐安\大一下\数据结构\stl库\main.cpp
+
+1622124364 source:d:\个人文件夹\李槐安\大一下\数据结构\stl库\动态查找表.cpp
+	<iostream>
+	<map>
+	<string>
+

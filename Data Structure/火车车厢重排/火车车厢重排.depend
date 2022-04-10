@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1617289961 source:d:\个人文件夹\李槐安\大一下\数据结构\火车车厢重排\main.cpp
+	<iostream>
+	"../链式队列/linkQueue.h"
+
+1617290119 d:\个人文件夹\李槐安\大一下\数据结构\链式队列\linkqueue.h
+	<cstddef>
+
