@@ -1,0 +1,220 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amscd,amsbsy,amssymb,latexsym,url,bm,amsthm}
+\usepackage{epsfig,graphicx,subfigure}
+\usepackage{enumitem,balance}
+\usepackage{wrapfig}
+\usepackage{mathrsfs,euscript}
+\usepackage[usenames]{xcolor}
+\usepackage{hyperref}
+\usepackage[vlined,ruled,linesnumbered]{algorithm2e}
+\hypersetup{colorlinks=true,linkcolor=black}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{exercise}{Exercise}
+\newtheorem*{solution}{Solution}
+\newtheorem{definition}{Definition}
+\theoremstyle{definition}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\newcommand{\postscript}[2]
+ {\setlength{\epsfxsize}{#2\hsize}
+  \centerline{\epsfbox{#1}}}
+
+\renewcommand{\baselinestretch}{1.0}
+
+\setlength{\oddsidemargin}{-0.365in}
+\setlength{\evensidemargin}{-0.365in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{7in}
+\makeatletter \renewenvironment{proof}[1][Proof] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
+\makeatletter
+\renewenvironment{solution}[1][Solution] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
+
+\begin{document}
+\noindent
+
+%========================================================================
+\noindent\framebox[\linewidth]{\shortstack[c]{
+\Large{\textbf{Lab02-Divide \& Conquer and Greedy Approach}}\vspace{1mm}\\
+Algorithm and Complexity, Xiaofeng Gao, Spring 2022.}}
+\begin{center}
+\footnotesize{\color{red}$*$ If there is any problem, please contact TA Wanghua Shi.}
+
+% Please write down your name, student id and email.
+\footnotesize{\color{blue}$*$ Name: Zhenran Xiao  \quad Student ID: 520030910281 \quad Email: xiaozhenran@sjtu.edu.cn}
+\end{center}
+
+
+
+\begin{enumerate}
+    \item
+    Can Master Theorem apply to the recursive formula $T(n)=2T(\frac{n}{5})+O(\log n)$? What is the time complexity of $T(n)$ thereby?
+    \begin{solution}
+        No. Master Theorem can apply to the formula like $T(n) =aT(\frac{n}{b})+O(n^d)$ .But we can't determine $d$ in $T(n)=2T(\frac{n}{5})+O(\log n)$. \\
+        Calculate the time complexity by recurrence computation:
+        \begin{align*}
+        	T(n)&=2T(\frac{n}{5})+O(\log n) \\
+        	&=2(2T(\frac{n}{5^2})+O(\log \frac{n}{5}))+O(\log n) \\
+        	&=2^2T(\frac{n}{5^2})+2O(\log \frac{n}{5})+O(\log n) \\
+        	&=2^3T(\frac{n}{5^3})+2^2O(\log \frac{n}{5^2})+2O(\log \frac{n}{5})+O(\log n) \\
+        	&=2^{k}T(\frac{n}{5^{k}}) + 2^{k-1}O(\log \frac{n}{5^{k-1}}) + ...+ 2O(\log \frac{n}{5}) + O(\log n)       	
+        \end{align*}
+    	There is $n/5^{k} = 1$. So $k = \log_5 n$.
+    	\begin{align*}
+    		T(n)&=2^{k}T(1)+2^{k-1}O(\log n - (k-1)\log 5) +...+ 2O(\log n - \log 5) + O(\log n) \\
+    		&=O((\sum_{i=0}^{k-1}2^{i})\log n-(\sum_{i=0}^{k-1}i\cdot2^{i})\log 5) \\
+    		&=O((2^{k}-1)\log n-[(k-2)2^{k}+2]\log 5) \\
+    		&=O(2^{\log_5 n}\cdot \log n-\log n-\log_5 n\cdot 2^{\log_5 n}\cdot \log 5 + 2\cdot 2^{\log_5 n}\cdot \log 5-2\log 5) \\
+    		&=O(n^{\log_5 2}\cdot \log n - \log n - \log n\cdot n^{\log_5 2} + 2\log 5\cdot n^{\log_5 2}-2\log 5) \\
+    		&=O(2\log 5\cdot n^{\log_5 2} - \log n - 2\log 5) \\
+    		&\approx O(n^{0.43})
+    	\end{align*}
+    	Therefore, the time complexity of $T(n)$ is $O(n^{0.43})$. 
+    \end{solution}
+
+    \item
+    Given an array of positive integers, we will implement \emph{floating point division} between adjacent integers. For instance, given an array [66, 22, 15, 78], we will execute $66/22/15/78 \approx 0.003$. However, you can add some parentheses at any position to change the priority of arithmetic and get a maximum quotient. Given an input array, design an algorithm to output an arithmetic with the maximum quotient, be sure to avoid redundant parentheses. For example, given the above input ``[66, 22, 15, 78]", your algorithm should output ``66/(22/15/78)", because it is the maximum quotient (illustrated as follows):
+    \begin{itemize}
+        \item 66/22/15/78 $\approx$ 0.003; 
+        
+        \item 66/(22/15/78) = 3510; 
+        
+        \item 66/(22/15)/78 $\approx$ 0.58;
+        
+        \item 66/22/(15/78) = 15.6; 
+
+        \item 66/(22/(15/78)) $\approx$ 0.58.
+    \end{itemize}
+   \begin{solution}
+   	\quad \\
+        \begin{algorithm}[H]
+        	\KwIn{array[1,...,n]}
+        	\KwOut{a formula}
+        	\BlankLine
+        	\caption{$maxquot(array[1,...,n])$} \label{Alg-div}
+        	$formula \leftarrow ``array[1]/array[2]/array[3]/.../array[n]"$ \;
+        	\For{$array[1]$ to $array[n]$ in the formula}
+        	{
+        		\If{$array[2]$}{
+        			insert a ``$($" in front of it\;
+        		}
+	        	\If{$array[n]$}{
+	        		insert a ``$)$" behind it\;
+	        	}
+        	}
+        	\Return{$formula$}\;
+        \end{algorithm}
+    If we want to make the result biggest, we need to make the molecular bigger and the denominator smaller. By add parentheses, we can make all ingeters except the second integer become multipliers of the molecular. Therefore, the smallest denominator is the second integer and the biggest molecular is the product of all the other integers.
+    \end{solution}
+
+
+
+
+    \item
+   Given an array $A=[a_1, \cdots, a_n]$, we define ``$k$-reverse'' operation $(1 \leq k \leq n)$ as reversing the sub-array $[a_1, a_2, \cdots, a_k]$, \textit{i.e.}, changing $A=[a_1, a_2, \cdots, a_k, a_{k+1}, \cdots, a_n]$ to $A=[a_k, a_{k-1}, \cdots, a_1, a_{k+1}, \cdots, a_n]$. For instance, if we perform a ``$3$-reverse'' operation on array $A=[72,-16,-38,9]$, we can get the result $A=[-38,-16,72,9]$. Please design an algorithm to sort $A$ in ascending order only by reverse operations. Output the list of $k$ values per step and analyze its time complexity. For instance, given an array $A=[3,2,4,1]$, your output should be as follows:
+   
+   Round 1: $k=4$, $A=[1, 4, 2, 3]$;
+   
+   Round 2: $k=2$, $A=[4, 1, 2, 3]$;
+   
+   Round 3: $k=4$, $A=[3, 2, 1, 4]$;
+   
+   Round 4: $k=3$, $A=[1, 2, 3, 4]$.
+    \begin{solution}
+        \quad \\
+        \begin{algorithm}[H]
+        	\KwIn{array[1,...,n]}
+        	\KwOut{array[1,...,n] sorted in nondecreasing order.}
+        	\BlankLine
+        	\caption{$ReverseSort(array[1,..,n])$} \label{Alg-div}
+        	$round \leftarrow 1$ \;
+        	$k \leftarrow n$ \;
+        	\textbf{do} $k-reverse$ operation\;
+        	\textbf{Output} $round,k$ and $array[1,..,n]$ \;
+        	\For{$i\leftarrow n$ to $2$}
+        	{
+        		$max \leftarrow array[1]$ \;
+        		\For{$j\leftarrow 1$ to $i$}
+        		{
+        			\If{$array[j] \textgreater max$}
+        			{
+        				$k \leftarrow j$ \;
+        				$max \leftarrow array[j]$ \;
+        			}
+        		}
+        		\If{$k = i$}
+        		{
+        			\textbf{continue} \;
+        		}
+        		\ElseIf{$k = 1$}
+        		{
+        			$k \leftarrow i$ \;
+        			\textbf{do} $k-reverse$ operation\;
+        			$round \leftarrow round + 1$ \;
+        			\textbf{Output} $round,k$ and $array[1,..,n]$ \;
+        		}
+        		\Else
+        		{
+        			\textbf{do} $k-reverse$ operation\;
+        			$round \leftarrow round + 1$ \;
+        			\textbf{Output} $round,k$ and $array[1,..,n]$ \;
+        			$k \leftarrow i$ \;
+        			\textbf{do} $k-reverse$ operation\;
+        			$round \leftarrow round + 1$ \;
+        			\textbf{Output} $round,k$ and $array[1,..,n]$ \;
+        		}
+        	}
+        	\Return{}\;       	
+        \end{algorithm}
+    	\[T(n) = c_1 + \sum_{i=2}^{n}(c_2+\sum_{j=1}^{i}c_3) \sim O(n^2)
+    	\]
+        The time complexity is O($n^2$).\\
+    \end{solution}
+
+    \item
+    A \emph{perfect array} $A$ with $n$ numbers satisfies: (1) it is a permutation of integers in the range of $[1,n]$; and (2) there is no index $k$ with $1\le i < k < j \leq n $ where $2 \cdot A[k] = A[i] + A[j]$. For any positive integer $n$, design an algorithm to generate a perfect array $A$ of length $n$ (any perfect array is acceptable).
+    \begin{solution}
+        \quad \\
+        \begin{algorithm}[H]
+        	\KwIn{an interger $n$.}
+        	\KwOut{a perfect array $A$ of length $n$.}
+        	\BlankLine
+        	\caption{$PerfectArray(n)$} \label{Alg-div}
+        	\If{$n = 1$}
+        	{
+        		\Return{[1]} \;
+        	}
+        	\Else
+        	{
+        		$LeftArray\leftarrow PerfertArray(\frac{n+1}{2})$ \;
+        		\For{$i\leftarrow 0$ to $size$ of $LeftArray$}
+        		{
+        			$tmp\leftarrow LeftArray[i]*2-1$ \;
+        			append $tmp$ into $A$ \;
+        		}
+        		$RightArray\leftarrow PerfertArray(\frac{n}{2})$ \;
+        		\For{$j\leftarrow 0$ to $size$ of $RightArray$}
+        		{
+        			$tmp\leftarrow RightArray[j]*2$ \;
+        			append $tmp$ into $A$ \;
+        		}
+        	}
+        	\Return{$A$}\;
+        \end{algorithm}
+    \end{solution}
+
+\end{enumerate}
+
+\vspace{20pt}
+
+\textbf{Remark:} You need to include your .pdf and .tex files in your uploaded .rar or .zip file.
+
+%========================================================================
+\end{document}

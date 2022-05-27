@@ -1,0 +1,233 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amscd,amsbsy,amssymb,latexsym,url,bm,amsthm}
+\usepackage{epsfig,graphicx,subfigure}
+\usepackage{enumitem,balance}
+\usepackage{wrapfig}
+\usepackage{mathrsfs,euscript}
+\usepackage[usenames]{xcolor}
+\usepackage{hyperref}
+\usepackage[vlined,ruled,linesnumbered]{algorithm2e}
+\hypersetup{colorlinks=true,linkcolor=black}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{exercise}{Exercise}
+\newtheorem*{solution}{Solution}
+\newtheorem{definition}{Definition}
+\theoremstyle{definition}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\newcommand{\postscript}[2]
+ {\setlength{\epsfxsize}{#2\hsize}
+  \centerline{\epsfbox{#1}}}
+
+\renewcommand{\baselinestretch}{1.0}
+
+\setlength{\oddsidemargin}{-0.365in}
+\setlength{\evensidemargin}{-0.365in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{7in}
+\makeatletter \renewenvironment{proof}[1][Proof] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
+\makeatletter
+\renewenvironment{solution}[1][Solution] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
+
+\begin{document}
+\noindent
+
+%========================================================================
+\noindent\framebox[\linewidth]{\shortstack[c]{
+\Large{\textbf{Lab01-Algorithm Analysis}}\vspace{1mm}\\
+CS2308-Algorithm and Complexity, Xiaofeng Gao, Spring 2022.}}
+\begin{center}
+\footnotesize{\color{red}$*$ If there is any problem, please contact TA Hongjie Fang.}
+
+% Please write down your name, student id and email.
+\footnotesize{\color{blue}$*$ Name: Zhenran Xiao  \quad Student ID: 520030910281 \quad Email: xiaozhenran@sjtu.edu.cn}
+\end{center}
+
+\begin{enumerate}
+	\item Use minimal counterexample to prove that every integer $n \ge 11$ can be written as $5x + 2y$ where $x, y$ are positive integers.
+	
+	    \begin{proof}
+	        For smaller integer, obviously the proposition is true:\\ $11=5\times1+2\times3, 12=5\times2+2\times1$;\\
+	        For bigger integer, assume that all the integers which do not comfort to the proposition belong to Set \textbf{M}, and $k$ is the smallest integer in \textbf{M}. \\
+	        Obviously, $k-2$ doesn't belong to \textbf{M}. It is an integer that comforts to the propostition. So $k-2 = 5x+2y$.\\
+	        Then we can easily find that $k=k-2+2=5x+2y+2=5x+2(y+1)$. This contradicts the hypothesis.\\
+	        So the hypothesis is not true. The original proposition has been proved.        
+	    \end{proof}
+	
+    \item Rank the following functions by order of growth with brief explanations: that is, find an arrangement $g_1, g_2, \ldots , g_{10}$ of the functions $g_1 = \Omega(g_2), g_2 = \Omega(g_3), \ldots, g_{9} = \Omega(g_{10})$. Partition your list into equivalence classes such that functions $f(n)$ and $g(n)$ are in the same class if and only if $f(n) = \Theta(g(n))$. Use symbols ``$=$'' and ``$\prec$'' to order these functions appropriately. Here $\log n$ stands for $\log_2 n$.
+    $$
+    \begin{array}{ccccc}
+    2^{2^n} \quad & n^2 \quad & n! \quad & 2^n \quad & \log^2 n \\
+    e^n \quad & \log\log n \quad & n\cdot 2^n \quad & n \quad & \log (n^2) \\
+    \end{array}
+    $$
+    
+    \begin{solution}
+    	$\log\log n$ $\prec$ $\log (n^2)$ $\prec$ $\log^2 n$ $\prec$ $n$ $\prec$ $n^2$ $\prec$ $2^n$ $\prec$ $n\cdot 2^n$ $\prec$ $e^n$ $\prec$ $n!$ $\prec$ $2^{2^n}$ \\
+    	Explanations:\\
+    	(1) $\log^2 n$ $\prec$ $n$\\
+    	According to L'Hopital's rule, \\
+    	\[\lim_{n \to \infty}\frac{\log n}{\sqrt{n}} = 0
+    	\]
+    	So $\log n \prec \sqrt{n}$. 
+    	So $\log^2 n \prec n$. \\
+    	(2) $n\cdot 2^n \prec e^n$\\
+    	\[n\cdot 2^n \prec (\frac{e}{2})^n\cdot 2^n = e^n
+    	\]
+    	So $n\cdot 2^n \prec e^n$.\\
+    	(3)$e^n \prec n!$\\
+    	\[\lim_{n \to \infty}\frac{e^n}{n!} = \frac{e}{1}\cdot \frac{e}{2}\cdot \frac{e}{3}\cdot...\cdot \frac{e}{n} = 0
+    	\]
+    	So $e^n \prec n!$.\\
+    	The other "$\prec$"s are obvious. 
+    \end{solution}
+	
+	\item Here are the pseudo-codes of improved BubbleSort (Alg. \ref{Alg-ImprovedBubbleSort}) and QuickSort (Alg. \ref{Alg-QuickSort}).
+	
+	\begin{minipage}[t]{0.46\textwidth}
+		\begin{algorithm}[H]
+			\KwIn{An array $A[1,\dots,n]$}
+			\KwOut{$A$ sorted nondecreasingly}
+			
+			\BlankLine
+			\caption{Improved BubbleSort}\label{Alg-ImprovedBubbleSort}
+			
+			$i\leftarrow 1$; $sorted\leftarrow false$\;
+			
+			\While{$i\leq n-1$ \textbf{and not} $sorted$}{
+				$sorted\leftarrow true$\;
+				\For{$j\leftarrow n $ \textbf{downto} $i+1$}{
+					\If{$A[j]<A[j-1]$}{
+						swap $A[j]$ and $A[j-1]$\;
+						$sorted\leftarrow false$\;
+					}
+				}
+				$i\leftarrow i+1$\;
+			}
+		\end{algorithm}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.46\textwidth}
+		\begin{algorithm}[H]
+			\KwIn{An array $A[1,\cdots,n]$}
+			\KwOut{$A$ sorted nondecreasingly}
+			
+			\BlankLine
+			\caption{QuickSort}\label{Alg-QuickSort}
+			
+			$i \leftarrow 1$; $pivot \leftarrow A[n]$\; 
+			
+			\For{$j \leftarrow 1$ \KwTo $n-1$}{
+				\If{$A[j] < pivot$}{
+					swap $A[i]$ and $A[j]$\;
+					$i \leftarrow i+1$\;
+				}
+			}
+			
+			swap $A[i]$ and $A[n]$\;
+			\lIf{$i>1$}{$\operatorname{QuickSort}(A[1,\cdots,i-1])$}
+			\lIf{$i<n$}{$\operatorname{QuickSort}(A[i+1,\cdots,n])$}
+		\end{algorithm}
+	\end{minipage}
+
+	\begin{enumerate}
+		\item The key idea of the improved BubbleSort is that we can stop the iteration if there are no swaps during an iteration. Therefore, we use an indicator $sorted$ in Alg. \ref{Alg-ImprovedBubbleSort} to check whether the array is already sorted.	Analyze the \textbf{best} and \textbf{worst} time complexity of the improved BubbleSort.
+		
+		\item Analyze the \textbf{average} time complexity of the QuickSort in Alg. \ref{Alg-QuickSort}.
+		
+		\item To avoid the worst case of QuickSort from happening too often, in practice we can randomly shuffle the sequence before sorting. Follow this idea and Alg. \ref{Alg-QuickSort} to implement QuickSort in C++. You only need to complete the \texttt{TODO} part in \texttt{Lab01-QuickSort.cpp}.
+		
+		 \textit{\color{blue}(Hint: you can use the built-in function \texttt{random\_shuffle(...)} in C++ \texttt{<algorithm>} library to randomly shuffle the sequence before sorting. Other built-in sorting functions such as \texttt{sort(...)} in C++ are \textbf{NOT} allowed to use. )}
+		
+		\item \textit{(Bonus)} Analyze the \textbf{average} time complexity of the improved BubbleSort in Alg. \ref{Alg-ImprovedBubbleSort}. 
+		
+		\textit{\color{blue}(Hint: consider the relation between average number of comparisons and interchanges.)}
+		
+	\end{enumerate}
+
+    \begin{solution}
+    	\quad \\
+    	\begin{enumerate}
+    		\item Best Case: Θ($n$). The array has been sorted before BubbleSort.\\
+    		Worst Case: Θ($n^2$). BubbleSort goes through the whole array. \\
+    		
+    		\item For partition, the cost is $n-1$.\\
+    		The results of partition are equally possible. It means that after partition $i$ takes each value in [$0, n-1$] with equal probability. There are $i$ elements on the left of the pivot and $n-1-i$ elements on the right.\\
+    		So we can make out the recursive formula:
+    		\[
+    		T(n) = (n-1)+ \sum_{i=0}^{n-1}\frac{1}{n}[T(i)+T(n-1-i)], n\geq 2
+    		\]
+    		And we can easily know $T(1)=T(0)=0$. And according to the symmetry, $\sum_{i=0}^{n-1}T(i)=\sum_{i=0}^{n-1}T(n-1-i)$.\\
+    		So the recursive formula can be changed into:
+    		\[
+    		T(n) = (n-1)+ \frac{2}{n}\sum_{i=0}^{n-1}T(i), n\geq 2
+    		\]
+    		We can use dislocation subtraction to work out the final result:
+    		\[nT(n) = n(n-1)+2\sum_{i=0}^{n-1}T(i), (n-1)T(n-1) = (n-1)(n-2)+2\sum_{i=0}^{n-2}T(i)
+    		\]
+    		\[\Rightarrow nT(n)-(n-1)T(n-1) = 2(n-1)+2T(n-1)
+    		\]
+    		\[\Rightarrow nT(n) = (n+1)T(n-1)+2(n-1)
+    		\]
+    		\[\Rightarrow \frac{T(n)}{n+1}=\frac{T(n-1)}{n}+\frac{2(n-1)}{n(n+1)}
+    		\]
+    		Set $X(n)=\frac{T(n)}{n+1}$, thus
+    		\[X(n)=X(n-1)+\frac{2(n-1)}{n(n+1)}, X(1)=X(0)=0
+    		\]
+    		\[\Rightarrow X(n)-\frac{2}{n+1}=X(n-1)-\frac{2}{n}+\frac{2}{n+1}
+    		\]
+    		Set $Y(n)=X(n)-\frac{2}{n+1}$, thus
+    		\[Y(n)=Y(n-1)+\frac{2}{n+1}, Y(1)=-1,Y(0)=-2
+    		\]
+    		\[\Rightarrow Y(n)=\sum_{i=0}^{n}\frac{2}{i+1}\sim\ln n+c
+    		\]
+    		\[\Rightarrow X(n)=Y(n)+\frac{2}{n+1} \sim O(\log n)
+    		\]
+    		\[\Rightarrow T(n)=(n+1)X(n)\sim O(n\log n)
+    		\]
+    		Therefore, the average time complexity of the QuickSort is O(n$\log$ n). \\
+    		
+    		\item See it in \texttt{Lab01\_QuickSort.cpp}. \\
+    		
+    		\item Assume that the number of comparisons is $c$ and the number of interchanges is $i$. So the time cost is
+    		\[COST = c + i
+    		\]
+    		And we can easily know there must be $c \geq i$. So there is
+    		\[COST \geq 2i
+    		\]
+    		About interchanging, according to the BubbleSort algorithm, we can know that its core idea is turning disordered pairs to ordered pairs.
+    		In fact, each interchange eliminates a disordered pair.\\
+    		Assume that there are $d$ disordered pairs and $o$ ordered pairs in a series. We can know that
+    		\[ d + o = \binom{n}{2} = \frac{n(n-1)}{2}
+    		\]
+    		Considering the possibility of each possible series is equal and the symmetry between ordered pairs and disordered pairs, the average number of disordered pairs in a series should be
+    		\[\bar{d} = \frac{n(n-1)}{4}
+    		\]
+    		Because each interchange eliminates a disordered pair, so
+    		\[\bar{i}=\bar{d} = \frac{n(n-1)}{4}
+    		\]
+    		Therefore,
+    		\[T(n) = \overline{COST} \geq 2\bar{i} = \frac{n(n-1)}{2}
+    		\]
+    		The worst case of the improved BubbleSort is Θ$(n^2)$, so the average time complexity is Θ$(n^2)$.
+    		
+    	
+    	\end{enumerate}
+    \end{solution}
+
+\end{enumerate}
+
+\vspace{20pt}
+
+\textbf{Remark:} You need to include your .pdf, .tex and .cpp files in your uploaded .rar or .zip file.
+
+%========================================================================
+\end{document}
