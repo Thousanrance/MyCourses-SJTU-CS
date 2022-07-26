@@ -1,0 +1,838 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 0] =          0
+
+*************************************************
+0 0
+PC =          0
+====== MA - WB ======
+REG DEST =  0
+FINAL DATA =          0
+REG WRITE = 0
+====== EX - MA ======
+CTR SIGNALS = 00000000
+ALU RES =          0
+READ DATA 2 =          0
+REG DEST =  0
+ALU Input (after forwarding) =          0,          0
+ALU Input =          0,          0
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0000000000000
+INST = 00000000000000000000000000000000
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  0, rt =  0
+ID2EX_PC =          x
+ID2EX_EXT_RES =          0
+Branch Dest =          x
+====== IF - ID ======
+INST = 10001100000000010000000000000000
+         4          4          4          4
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 1] =          0
+
+*************************************************
+0 0
+PC =          4
+====== MA - WB ======
+REG DEST =  0
+FINAL DATA =          0
+REG WRITE = 0
+====== EX - MA ======
+CTR SIGNALS = 00000000
+ALU RES =          0
+READ DATA 2 =          0
+REG DEST =  0
+ALU Input (after forwarding) =          0,          0
+ALU Input =          0,          0
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0010010000111
+INST = 10001100000000010000000000000000
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  0, rt =  0
+ID2EX_PC =          0
+ID2EX_EXT_RES =          0
+Branch Dest =          4
+====== IF - ID ======
+INST = 10001100000000100000000000000001
+         8          8          8          8
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 2] =          0
+
+*************************************************
+0 0
+PC =          8
+====== MA - WB ======
+REG DEST =  0
+FINAL DATA =          0
+REG WRITE = 0
+====== EX - MA ======
+CTR SIGNALS = 10000111
+ALU RES =          0
+READ DATA 2 =          0
+REG DEST =  1
+ALU Input (after forwarding) =          0,          0
+ALU Input =          0,          0
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0010010000111
+INST = 10001100000000100000000000000001
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  0, rt =  1
+ID2EX_PC =          0
+ID2EX_EXT_RES =          0
+Branch Dest =          4
+====== IF - ID ======
+INST = 10001100000000110000000000000111
+        12         12         12         12
+Memory Reading:
+    Mem[         0] =        255
+
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 3] =          0
+
+*************************************************
+0 0
+PC =         12
+====== MA - WB ======
+REG DEST =  1
+FINAL DATA =        255
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 10000111
+ALU RES =          1
+READ DATA 2 =          0
+REG DEST =  2
+ALU Input (after forwarding) =          0,          0
+ALU Input =          0,          1
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0010010000111
+INST = 10001100000000110000000000000111
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  0, rt =  2
+ID2EX_PC =          4
+ID2EX_EXT_RES =          1
+Branch Dest =         12
+====== IF - ID ======
+INST = 10001100011001000000000000001011
+        16         16         16         16
+Memory Reading:
+    Mem[         1] =        256
+
+Register Reading:
+    Reg[ 3] =          0
+    Reg[ 4] =          0
+
+Register Writing:
+    Reg[ 1] =        255
+
+*************************************************
+1 0
+PC =         16
+====== MA - WB ======
+REG DEST =  2
+FINAL DATA =        256
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 10000111
+ALU RES =          7
+READ DATA 2 =          0
+REG DEST =  3
+ALU Input (after forwarding) =          0,          0
+ALU Input =          0,          7
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0010010000111
+INST = 10001100011001000000000000001011
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  0, rt =  3
+ID2EX_PC =          8
+ID2EX_EXT_RES =          7
+Branch Dest =         40
+====== IF - ID ======
+INST = 00000000001000100011000000100000
+        20         20         20         20
+Memory Reading:
+    Mem[         7] =          3
+
+Register Writing:
+    Reg[ 2] =        256
+
+*************************************************
+0 0
+PC =         16
+====== MA - WB ======
+REG DEST =  3
+FINAL DATA =          3
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 00000000
+ALU RES =          0
+READ DATA 2 =          0
+REG DEST =  0
+ALU Input (after forwarding) =          0,          0
+ALU Input =          0,          0
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0010010000111
+INST = 10001100011001000000000000001011
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  0, rt =  0
+ID2EX_PC =         12
+ID2EX_EXT_RES =          0
+Branch Dest =         16
+====== IF - ID ======
+INST = 00000000001000100011000000100000
+        20         20         20         20
+Register Reading:
+    Reg[ 1] =        255
+    Reg[ 2] =        256
+
+Register Writing:
+    Reg[ 3] =          3
+
+*************************************************
+0 0
+PC =         20
+====== MA - WB ======
+REG DEST =  0
+FINAL DATA =          0
+REG WRITE = 0
+====== EX - MA ======
+CTR SIGNALS = 10000111
+ALU RES =         14
+READ DATA 2 =          0
+REG DEST =  4
+ALU Input (after forwarding) =          3,          0
+ALU Input =          3,         11
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0001000000001
+INST = 00000000001000100011000000100000
+ID_REG_READ_DATA_1 =        255
+ID_REG_READ_DATA_2 =        256
+ID2EX inst rs =  3, rt =  4
+ID2EX_PC =         12
+ID2EX_EXT_RES =         11
+Branch Dest =         60
+====== IF - ID ======
+INST = 00000000100000010011100000100010
+        24         24         24         24
+Memory Reading:
+    Mem[        14] =        261
+
+Register Reading:
+    Reg[ 4] =          0
+    Reg[ 1] =        255
+
+*************************************************
+0 0
+PC =         24
+====== MA - WB ======
+REG DEST =  4
+FINAL DATA =        261
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 00000001
+ALU RES =        511
+READ DATA 2 =        256
+REG DEST =  6
+ALU Input (after forwarding) =        255,        256
+ALU Input =        255,        256
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0001000000001
+INST = 00000000100000010011100000100010
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =        255
+ID2EX inst rs =  1, rt =  2
+ID2EX_PC =         16
+ID2EX_EXT_RES =      12320
+Branch Dest =      49300
+====== IF - ID ======
+INST = 10001100111100000000000000000101
+        28         28         28         28
+Register Reading:
+    Reg[ 7] =          0
+    Reg[16] =          0
+
+Register Writing:
+    Reg[ 4] =        261
+
+*************************************************
+0 0
+PC =         28
+====== MA - WB ======
+REG DEST =  6
+FINAL DATA =        511
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 00000001
+ALU RES =          6
+READ DATA 2 =        255
+REG DEST =  7
+ALU Input (after forwarding) =        261,        255
+ALU Input =        261,        255
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0010010000111
+INST = 10001100111100000000000000000101
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  4, rt =  1
+ID2EX_PC =         20
+ID2EX_EXT_RES =      14370
+Branch Dest =      57504
+====== IF - ID ======
+INST = 00000000001001000010100000100100
+        32         32         32         32
+Register Reading:
+    Reg[ 1] =        255
+    Reg[ 4] =        261
+
+Register Writing:
+    Reg[ 6] =        511
+
+*************************************************
+0 0
+PC =         32
+====== MA - WB ======
+REG DEST =  7
+FINAL DATA =          6
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 10000111
+ALU RES =         11
+READ DATA 2 =          0
+REG DEST = 16
+ALU Input (after forwarding) =          6,          0
+ALU Input =          6,          5
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0001000000001
+INST = 00000000001001000010100000100100
+ID_REG_READ_DATA_1 =        255
+ID_REG_READ_DATA_2 =        261
+ID2EX inst rs =  7, rt = 16
+ID2EX_PC =         24
+ID2EX_EXT_RES =          5
+Branch Dest =         48
+====== IF - ID ======
+INST = 00000010000000100100000000100101
+        36         36         36         36
+Memory Reading:
+    Mem[        11] =          7
+
+Register Reading:
+    Reg[16] =          0
+    Reg[ 2] =        256
+
+Register Writing:
+    Reg[ 7] =          6
+
+*************************************************
+0 0
+PC =         36
+====== MA - WB ======
+REG DEST = 16
+FINAL DATA =          7
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 00000001
+ALU RES =          5
+READ DATA 2 =        261
+REG DEST =  5
+ALU Input (after forwarding) =        255,        261
+ALU Input =        255,        261
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0001000000001
+INST = 00000010000000100100000000100101
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =        256
+ID2EX inst rs =  1, rt =  4
+ID2EX_PC =         28
+ID2EX_EXT_RES =      10276
+Branch Dest =      41136
+====== IF - ID ======
+INST = 10101100101010000000000000000111
+        40         40         40         40
+Register Reading:
+    Reg[ 5] =          0
+    Reg[ 8] =          0
+
+Register Writing:
+    Reg[16] =          7
+
+*************************************************
+0 0
+PC =         40
+====== MA - WB ======
+REG DEST =  5
+FINAL DATA =          5
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 00000001
+ALU RES =        263
+READ DATA 2 =        256
+REG DEST =  8
+ALU Input (after forwarding) =          7,        256
+ALU Input =          7,        256
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0010010001000
+INST = 10101100101010000000000000000111
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs = 16, rt =  2
+ID2EX_PC =         32
+ID2EX_EXT_RES =      16421
+Branch Dest =      65720
+====== IF - ID ======
+INST = 00100000001010100000000100000000
+        44         44         44         44
+Register Reading:
+    Reg[ 1] =        255
+    Reg[10] =          0
+
+Register Writing:
+    Reg[ 5] =          5
+
+*************************************************
+0 0
+PC =         44
+====== MA - WB ======
+REG DEST =  8
+FINAL DATA =        263
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 10001000
+ALU RES =         12
+READ DATA 2 =          0
+REG DEST =  8
+ALU Input (after forwarding) =          5,        263
+ALU Input =          5,          7
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0010010000001
+INST = 00100000001010100000000100000000
+ID_REG_READ_DATA_1 =        255
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  5, rt =  8
+ID2EX_PC =         36
+ID2EX_EXT_RES =          7
+Branch Dest =         68
+====== IF - ID ======
+INST = 00110000100010110000000011111111
+        48         48         48         48
+Register Reading:
+    Reg[ 4] =        261
+    Reg[11] =          0
+
+Register Writing:
+    Reg[ 8] =        263
+
+Memory Writing:
+    Mem[        12] =        263
+
+*************************************************
+0 0
+PC =         48
+====== MA - WB ======
+REG DEST =  8
+FINAL DATA =         12
+REG WRITE = 0
+====== EX - MA ======
+CTR SIGNALS = 10000001
+ALU RES =        511
+READ DATA 2 =          0
+REG DEST = 10
+ALU Input (after forwarding) =        255,          0
+ALU Input =        255,        256
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0000010000001
+INST = 00110000100010110000000011111111
+ID_REG_READ_DATA_1 =        261
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  1, rt = 10
+ID2EX_PC =         40
+ID2EX_EXT_RES =        256
+Branch Dest =       1068
+====== IF - ID ======
+INST = 00110110000011000000000100000000
+        52         52         52         52
+Register Reading:
+    Reg[16] =          7
+    Reg[12] =          0
+
+*************************************************
+0 0
+PC =         52
+====== MA - WB ======
+REG DEST = 10
+FINAL DATA =        511
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 10000001
+ALU RES =          5
+READ DATA 2 =          0
+REG DEST = 11
+ALU Input (after forwarding) =        261,          0
+ALU Input =        261,        255
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0000010000001
+INST = 00110110000011000000000100000000
+ID_REG_READ_DATA_1 =          7
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  4, rt = 11
+ID2EX_PC =         44
+ID2EX_EXT_RES =        255
+Branch Dest =       1068
+====== IF - ID ======
+INST = 10001100000010010000000000001100
+        56         56         56         56
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 9] =          0
+
+Register Writing:
+    Reg[10] =        511
+
+*************************************************
+0 0
+PC =         56
+====== MA - WB ======
+REG DEST = 11
+FINAL DATA =          5
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 10000001
+ALU RES =        263
+READ DATA 2 =          0
+REG DEST = 12
+ALU Input (after forwarding) =          7,          0
+ALU Input =          7,        256
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0010010000111
+INST = 10001100000010010000000000001100
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs = 16, rt = 12
+ID2EX_PC =         48
+ID2EX_EXT_RES =        256
+Branch Dest =       1076
+====== IF - ID ======
+INST = 00010001001010000000000000000001
+        60         60         60         60
+Register Reading:
+    Reg[ 9] =          0
+    Reg[ 8] =        263
+
+Register Writing:
+    Reg[11] =          5
+
+*************************************************
+1 0
+PC =         60
+====== MA - WB ======
+REG DEST = 12
+FINAL DATA =        263
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 10000111
+ALU RES =         12
+READ DATA 2 =          0
+REG DEST =  9
+ALU Input (after forwarding) =          0,          0
+ALU Input =          0,         12
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0010000100000
+INST = 00010001001010000000000000000001
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =        263
+ID2EX inst rs =  0, rt =  9
+ID2EX_PC =         52
+ID2EX_EXT_RES =         12
+Branch Dest =        104
+====== IF - ID ======
+INST = 00000000000010110110100100000000
+        64         64         64         64
+Memory Reading:
+    Mem[        12] =        263
+
+Register Writing:
+    Reg[12] =        263
+
+*************************************************
+0 0
+PC =         60
+====== MA - WB ======
+REG DEST =  9
+FINAL DATA =        263
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 00000000
+ALU RES =          0
+READ DATA 2 =          0
+REG DEST =  0
+ALU Input (after forwarding) =          0,          0
+ALU Input =          0,          0
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0010000100000
+INST = 00010001001010000000000000000001
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =        263
+ID2EX inst rs =  0, rt =  0
+ID2EX_PC =         56
+ID2EX_EXT_RES =          0
+Branch Dest =         60
+====== IF - ID ======
+INST = 00000000000010110110100100000000
+        64         64         64         64
+Register Reading:
+    Reg[ 0] =          0
+    Reg[11] =          5
+
+Register Writing:
+    Reg[ 9] =        263
+
+*************************************************
+0 1
+PC =         64
+====== MA - WB ======
+REG DEST =  0
+FINAL DATA =          0
+REG WRITE = 0
+====== EX - MA ======
+CTR SIGNALS = 00100000
+ALU RES =          0
+READ DATA 2 =        263
+REG DEST =  8
+ALU Input (after forwarding) =        263,        263
+ALU Input =        263,        263
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0001000000001
+INST = 00000000000010110110100100000000
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          5
+ID2EX inst rs =  9, rt =  8
+ID2EX_PC =         56
+ID2EX_EXT_RES =          1
+Branch Dest =         64
+====== IF - ID ======
+INST = 00000000000010110111000100000000
+        68         68         64         64
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 0] =          0
+
+*************************************************
+0 0
+PC =         64
+====== MA - WB ======
+REG DEST =  8
+FINAL DATA =          0
+REG WRITE = 0
+====== EX - MA ======
+CTR SIGNALS = 00000000
+ALU RES =          0
+READ DATA 2 =          0
+REG DEST =  0
+ALU Input (after forwarding) =          0,          0
+ALU Input =          0,          0
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0000000000000
+INST = 00000000000000000000000000000000
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  0, rt =  0
+ID2EX_PC =         60
+ID2EX_EXT_RES =          0
+Branch Dest =         64
+====== IF - ID ======
+INST = 00000000000010110111000100000000
+        68         68         68         68
+Register Reading:
+    Reg[ 0] =          0
+    Reg[11] =          5
+
+*************************************************
+0 0
+PC =         68
+====== MA - WB ======
+REG DEST =  0
+FINAL DATA =          0
+REG WRITE = 0
+====== EX - MA ======
+CTR SIGNALS = 00000000
+ALU RES =          0
+READ DATA 2 =          0
+REG DEST =  0
+ALU Input (after forwarding) =          0,          0
+ALU Input =          0,          0
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0001000000001
+INST = 00000000000010110111000100000000
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          5
+ID2EX inst rs =  0, rt =  0
+ID2EX_PC =          0
+ID2EX_EXT_RES =          0
+Branch Dest =          4
+====== IF - ID ======
+INST = 00000000000010100111100100000010
+        72         72         72         72
+Register Reading:
+    Reg[ 0] =          0
+    Reg[10] =        511
+
+*************************************************
+0 0
+PC =         72
+====== MA - WB ======
+REG DEST =  0
+FINAL DATA =          0
+REG WRITE = 0
+====== EX - MA ======
+CTR SIGNALS = 00000001
+ALU RES =         80
+READ DATA 2 =          5
+REG DEST = 14
+ALU Input (after forwarding) =          0,          5
+ALU Input =          4,          5
+EX_SHAMT_SIGNAL = 1
+====== ID - EX ======
+CTR SIGNALS = 0001000000001
+INST = 00000000000010100111100100000010
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =        511
+ID2EX inst rs =  0, rt = 11
+ID2EX_PC =         64
+ID2EX_EXT_RES =      28928
+Branch Dest =     115780
+====== IF - ID ======
+INST = 00000001111011101000100000101010
+        76         76         76         76
+Register Reading:
+    Reg[15] =          0
+    Reg[14] =          0
+
+*************************************************
+0 0
+PC =         76
+====== MA - WB ======
+REG DEST = 14
+FINAL DATA =         80
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 00000001
+ALU RES =         31
+READ DATA 2 =        511
+REG DEST = 15
+ALU Input (after forwarding) =          0,        511
+ALU Input =          4,        511
+EX_SHAMT_SIGNAL = 1
+====== ID - EX ======
+CTR SIGNALS = 0001000000001
+INST = 00000001111011101000100000101010
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs =  0, rt = 10
+ID2EX_PC =         68
+ID2EX_EXT_RES =      30978
+Branch Dest =     123984
+====== IF - ID ======
+INST = 00000001111100001001000000101010
+        80         80         80         80
+Register Reading:
+    Reg[15] =          0
+    Reg[16] =          7
+
+Register Writing:
+    Reg[14] =         80
+
+*************************************************
+0 0
+PC =         80
+====== MA - WB ======
+REG DEST = 15
+FINAL DATA =         31
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 00000001
+ALU RES =          1
+READ DATA 2 =          0
+REG DEST = 17
+ALU Input (after forwarding) =         31,         80
+ALU Input =         31,         80
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 0001000000001
+INST = 00000001111100001001000000101010
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          7
+ID2EX inst rs = 15, rt = 14
+ID2EX_PC =         72
+ID2EX_EXT_RES =      34858
+Branch Dest =     139508
+====== IF - ID ======
+INST = 00001000000000000000000000010110
+        84         84         84         84
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 0] =          0
+
+Register Writing:
+    Reg[15] =         31
+
+*************************************************
+0 0
+PC =         84
+====== MA - WB ======
+REG DEST = 17
+FINAL DATA =          1
+REG WRITE = 1
+====== EX - MA ======
+CTR SIGNALS = 00000001
+ALU RES =          0
+READ DATA 2 =          7
+REG DEST = 18
+ALU Input (after forwarding) =         31,          7
+ALU Input =         31,          7
+EX_SHAMT_SIGNAL = 0
+====== ID - EX ======
+CTR SIGNALS = 1000000000000
+INST = 00001000000000000000000000010110
+ID_REG_READ_DATA_1 =          0
+ID_REG_READ_DATA_2 =          0
+ID2EX inst rs = 15, rt = 16
+ID2EX_PC =         76
+ID2EX_EXT_RES =      36906
+Branch Dest =     147704
+====== IF - ID ======
+INST = 00000001111011101001000000101010
+        88         88         88         88
+Register Writing:
+    Reg[17] =          1
+

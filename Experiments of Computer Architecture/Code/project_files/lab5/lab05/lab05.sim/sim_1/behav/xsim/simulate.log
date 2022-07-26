@@ -1,0 +1,255 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+PC:          0
+
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 1] =          0
+
+Memory Reading:
+    Mem[         x] =          0
+
+Memory Reading:
+    Mem[         0] =        255
+
+PC:          0
+
+Register Writing:
+    Reg[ 1] =        255
+
+PC:          4
+
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 2] =          0
+
+Memory Reading:
+    Mem[         1] =        256
+
+PC:          8
+
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 3] =          0
+
+Memory Reading:
+    Mem[         7] =          3
+
+Register Writing:
+    Reg[ 3] =          3
+
+PC:         12
+
+Register Reading:
+    Reg[ 3] =          3
+    Reg[ 4] =          0
+
+Memory Reading:
+    Mem[        11] =          7
+
+Memory Reading:
+    Mem[        14] =        261
+
+Register Writing:
+    Reg[ 4] =        261
+
+PC:         16
+
+Register Reading:
+    Reg[ 1] =        255
+    Reg[ 2] =          0
+
+Memory Reading:
+    Mem[     12323] =          0
+
+Register Writing:
+    Reg[ 6] =        255
+
+PC:         20
+
+Register Reading:
+    Reg[ 4] =        261
+    Reg[ 1] =        255
+
+Register Writing:
+    Reg[ 7] =          6
+
+PC:         24
+
+Register Reading:
+    Reg[ 7] =          6
+    Reg[16] =          0
+
+Memory Reading:
+    Mem[         6] =          2
+
+Memory Reading:
+    Mem[         0] =        255
+
+Memory Reading:
+    Mem[        11] =          7
+
+Register Writing:
+    Reg[16] =          7
+
+PC:         28
+
+Register Reading:
+    Reg[ 1] =        255
+    Reg[ 4] =        261
+
+Memory Reading:
+    Mem[     10282] =          0
+
+Register Writing:
+    Reg[ 5] =          5
+
+PC:         32
+
+Register Reading:
+    Reg[16] =          7
+    Reg[ 2] =          0
+
+Register Writing:
+    Reg[ 8] =          7
+
+PC:         36
+
+Register Reading:
+    Reg[ 5] =          5
+    Reg[ 8] =          7
+
+PC:         40
+
+Register Reading:
+    Reg[ 1] =        255
+    Reg[10] =          0
+
+Register Writing:
+    Reg[10] =        511
+
+PC:         44
+
+Register Reading:
+    Reg[ 4] =        261
+    Reg[11] =          0
+
+Register Writing:
+    Reg[11] =          5
+
+PC:         48
+
+Register Reading:
+    Reg[16] =          7
+    Reg[12] =          0
+
+Register Writing:
+    Reg[12] =        263
+
+PC:         52
+
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 9] =          0
+
+Memory Reading:
+    Mem[        15] =        262
+
+Memory Reading:
+    Mem[        12] =          7
+
+Register Writing:
+    Reg[ 9] =          7
+
+PC:         56
+
+Register Reading:
+    Reg[ 9] =          7
+    Reg[ 8] =          7
+
+Memory Reading:
+    Mem[         1] =        256
+
+PC:         64
+
+Register Reading:
+    Reg[ 0] =          0
+    Reg[11] =          5
+
+Register Writing:
+    Reg[14] =         80
+
+PC:         68
+
+Register Reading:
+    Reg[ 0] =          0
+    Reg[10] =        511
+
+Register Writing:
+    Reg[15] =         31
+
+PC:         72
+
+Register Reading:
+    Reg[15] =         31
+    Reg[14] =         80
+
+Register Writing:
+    Reg[17] =          1
+
+PC:         76
+
+Register Reading:
+    Reg[15] =         31
+    Reg[16] =          7
+
+Register Writing:
+    Reg[18] =          0
+
+PC:         80
+
+Register Reading:
+    Reg[ 0] =          0
+    Reg[ 0] =          0
+
+PC:         88
+
+Register Writing:
+    Reg[31] =         92
+
+PC:         96
+
+Register Reading:
+    Reg[11] =          5
+    Reg[11] =          5
+
+Register Writing:
+    Reg[11] =          7
+
+PC:        100
+
+Register Reading:
+    Reg[31] =         92
+    Reg[ 0] =          0
+
+PC:         92
+
+Register Reading:
+    Reg[16] =          7
+    Reg[11] =          7
+
+PC:        108
+
+Register Reading:
+    Reg[11] =          7
+    Reg[11] =          7
+
+Register Writing:
+    Reg[11] =          9
+
+PC:        112
+
+Register Reading:
+    Reg[ x] =          x
+    Reg[ x] =          x
+
