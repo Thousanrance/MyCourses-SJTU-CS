@@ -25,4 +25,4 @@
 
 以上资料仅供参考，不保证正确性
 
-非常感谢学长学姐提供的作业参考，链接：https://github.com/SJTU-CSE/awesome-cs 上海交通大学计算机系本科作业参考
+非常感谢学长学姐提供的作业参考，指路：https://github.com/SJTU-CSE/awesome-cs 上海交通大学计算机系本科作业参考
