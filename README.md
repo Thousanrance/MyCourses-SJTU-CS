@@ -1,4 +1,4 @@
-# CourseCode
+# MyCourses-SJTU-CS
 一些课程的作业和代码
 
 2020-2021-1 CS1501 程序设计思想与方法（C++） Prof.顾运
@@ -35,7 +35,7 @@
 
 2022-2023-1 CS3328 云计算技术 Prof.李超
 
-
+Gitee同名仓库：https://gitee.com/thousanrance/my-courses-sjtu-cs
 
 以上资料仅供参考，不保证正确性
 
