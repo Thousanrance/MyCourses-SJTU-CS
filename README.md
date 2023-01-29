@@ -11,7 +11,7 @@
 
 2021-2022-2 CS2302 操作系统 Prof.吴晨涛，Prof.过意敏
 
-2021-2022-2 CS2303 操作系统课程设计 Prof.吴晨涛，Prof.过意敏
+2021-2022-2 CS2303 操作系统课程设计 Prof.吴晨涛，Prof.过意敏  https://github.com/Thousanrance/OperatingSystemProject
 
 2021-2022-2 CS2304 计算机科学中的数学基础 Prof.龙环
 
